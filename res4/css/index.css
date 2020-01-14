@@ -1,0 +1,543 @@
+@charset "utf-8";
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+@import url(normalize.css);
+@import url(common.css);
+#wrapper{
+    width:100%;
+    overflow: hidden
+}
+
+.header_con {height:auto}
+.head_slogan {display:none}
+
+/*main*/
+#main{
+    width:100%;
+}
+.main_con {
+    width:1000px;
+
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    text-align: center
+}
+/*.mainimg*/
+.mainimg {
+    display: block;
+    width:551px;
+    height: 550px;
+    position: relative;
+    margin-left: 50%;
+    left: -276px;
+    overflow: hidden
+}
+.mainimg img {
+    display: block;
+    position: absolute
+}
+/*.mainimg1,2,3,4,5*/
+.main_con img {
+    animation: roll 20s cubic-bezier(1,-0.01,0,1) infinite;
+	-webkit-animation: roll 20s cubic-bezier(1,-0.01,0,1) infinite;
+}
+
+@keyframes roll {
+    0% {
+        transform: rotateX(0)
+    }
+    50% {
+      transform: rotate(-180deg)
+    }
+    100% {
+      transform: rotateX(-360deg)
+    }
+}
+
+/*FOR ALL BY YOU*/
+.main_con .maintext{
+    display: block;
+    position: absolute;
+    width: 1000px;
+    top: 280px;
+    margin-left: 50%;
+    left: -500px;
+
+}
+.main_con .maintext h1 {
+    display: block;
+    float: left;
+    text-align: center;
+    width: 500px;
+    font-size: 48px;
+    transform: translateX(5px);
+    animation: leftright 3s linear infinite
+}
+.main_con .maintext p {
+    display: block;
+    font-size: 22px;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 6px #000;
+    margin-top: 370px;
+    animation: vanished 10s ease-in-out infinite
+}
+@keyframes vanished {
+    0% {
+        opacity: 1
+    }
+    50% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+.main_con .maintext b {
+    color: #ffffff;
+    font-weight: normal;
+    text-shadow: 2px 2px 6px #333;
+}
+@keyframes leftright {
+    0% {
+        transform: translateX(5px)
+    }
+    50% {
+         transform: translateX(15px)
+    }
+    100%{
+         transform: translateX(5px)
+    }
+}
+
+
+/*#section1*/
+#section1{
+    width:100%;
+    height: 1050px;
+    background: #444;
+    color: #fff;
+/*overflow:hidden;*/
+
+}
+.section1_con {
+    width:1200px;
+    padding-top: 100px;
+    position: relative;
+    margin:auto;
+}
+
+/*article 공통*/
+.section1_con article{
+  display:block;
+	float: left;
+  position: absolute;
+  margin: auto;
+  width:100%;
+  height: 500px;
+  background:#444;
+  padding-top: 100px;  
+}
+
+.section1_con h5 {
+    position: absolute;
+    font-size: 36px;
+    top: 100px;
+    right: 4px;
+    z-index: 100
+}
+
+.section1_con .pager {
+    display: block;
+    position: absolute;
+    z-index: 20;
+    right: 0;
+    top: 130px;
+    font-size: 1.1em;
+    letter-spacing: 0.1em
+}
+
+.bx-pager-item{
+  padding:6px 0px;
+  }
+
+.active,
+.dot:hover {
+border-bottom:solid 2px #eee;
+}
+
+.section1_con .businessimg {
+    display: block;
+    width:100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    float: left;
+  
+}
+.section1_con .business_con {
+    display:block;
+    color: #fff;
+    width:80%;
+    padding: 30px 0;
+    box-sizing: border-box;
+    height: 100%;
+    position:relative;
+    float: left;
+
+}
+.section1_con .business_con p{
+    font-size: 18px;
+    padding-top: 20px
+}
+
+#more { float: right; margin-top: 100px; }
+#more a { 
+  display: block; 
+  font-size: 18px; 
+  color: #eee; 
+  border-bottom: 2px solid #eee;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+#more a:hover {color: #444; background-color: #fff; transition: 0.8s;}
+
+/*page_num*/
+.section1_con .business_con .page_num {
+    display: block;
+    position: absolute;
+    font-size: 18px;
+    color: #ffffff;
+    bottom:0;
+    right:0;
+}
+/*control #business00 display:none*/
+.mySlides {display: none}
+.loader {z-index: 10}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+/*---------CSS WAVE-----------*/
+
+#mountain {
+    display:block;
+	overflow:hidden;
+	width:100%;
+	position:relative;
+	bottom:0;
+
+}
+
+.waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:300px;
+  max-height:350px;
+
+}
+
+/* Animation */
+@-webkit-keyframes move-forever {
+    0% {
+        transform: translateX(-90px) translateY(0) translateZ(0)
+    }
+
+    100% {
+        transform: translateX(85px) translateY(0) translateZ(0)
+    }
+}
+
+@keyframes move-forever {
+    0% { transform: translateX(-90px) translateY(0) translateZ(0)
+    }
+    100% {
+        transform: translateX(85px) translateY(0) translateZ(0)
+    }
+}
+
+.parallax > use {
+  -webkit-animation: move-forever 25s ease infinite;
+  animation: move-forever 25s ease infinite;
+}
+
+.parallax > use:nth-child(1) {
+  -webkit-animation-delay: -2s;
+  -webkit-animation-duration: 7s;
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  -webkit-animation-delay: -2s;
+  -webkit-animation-duration: 10s;
+  animation-delay: -2s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+ -webkit-animation-delay: -2s;
+  -webkit-animation-duration: 13s;
+  animation-delay: -2s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+ -webkit-animation-delay: -3s;
+  -webkit-animation-duration: 20s;
+  animation-delay: -3s;
+  animation-duration: 20s;
+}
+
+
+
+
+/*-------------------- On screens that are 1215px or less,-------------------------- */
+
+@media screen and (max-width: 1215px) {
+ 
+ .waves {
+  position:relative;
+  width: 100%;
+  height:15vh;
+  margin-bottom:-7px; /*Fix for safari gap*/
+  min-height:100px;
+  max-height:150px;
+}
+
+/*-----------main-------------*/
+    .main_con {
+    width:98%;
+    padding:0
+    }
+    .main_con .maintext{
+    width:100%;
+	  margin-left: 0;
+    left: 0;
+    overflow: hidden
+    }
+    .main_con .maintext h1{
+     font-size: 36px;
+     width:50%
+    }
+    .main_con .maintext p {
+     margin-top:300px
+    }
+   .mainimg{
+    width: 500px;
+    left: -250px;
+	  margin-left:50%;        
+    }
+    .mainimg img {
+     width:500px
+    }
+
+/*-----------section1------------- */
+    #section1{
+      height:800px
+    }
+    .section1_con {
+      width:80%
+    }
+    .section1_con article{
+      height:auto;
+		  width:100%
+    }
+
+   /* .section1_con .business_con */
+   .section1_con .business_con{
+   width:70%;
+   height:auto;
+   padding-top: 40px;
+   }
+ .section1_con .businessimg {
+    height:auto;
+    width:30%;
+    }
+  #more {margin: 50px 20px;}
+  .loader {display: none;}
+
+/*-------------------- On screens that are 800px or less,-------------------------- */
+@media screen and (max-width:800px) {
+    #mountain{
+    bottom:150px;
+    height:200px;
+    }
+    .loader { display:none }
+    #section1{
+      height:950px
+    }
+    .section1_con .business_con .page_num{
+      margin-left:50%;
+      left:-5px;
+		  bottom:-100px;
+    }
+ /*-----------main-------------*/
+    #main{
+	  height:500px
+	  }
+    .main_con .maintext h1{
+     font-size: 18px;
+     width:50%
+    }
+    .main_con .maintext p {
+     margin-top:120px;
+     font-size: 10px;
+    }
+    .mainimg{
+      width: 300px;
+      left: -150px;
+      margin-left:50%;        
+      }
+      .mainimg img {
+      width:300px
+      }
+    .waveWrapper {
+    height:450px
+    }
+/*-----------section1------------- */
+ /* .section1_con .business_con */
+   .section1_con .business_con{
+   width:100%;
+   padding-left:10px;
+   height:auto;
+   margin:auto;
+   float: none;
+   }
+
+  .section1_con .businessimg {
+    width:55%;
+    height: 300px;
+    background-size: 250px;
+    float:none;
+    margin-left: 20px;
+   } 
+	.section1_con article{
+	  padding-top:74px
+	}
+  /* .section1_con .business_con */
+  .section1_con .business_con p {
+    font-size: 15px
+   } 
+}
+
+/*-------------------- On screens that are 430px or less,-------------------------- */
+@media screen and (max-width: 430px) {
+    .section1_con {
+      width:96%
+    }
+    .section1_con h5 { font-size: 24px;}
+    #contact .contact_con img {
+      height: auto
+    }
+    .section1_con .business_con {
+      height: auto;
+      margin-top: 20px
+    }
+    .section1_con h3 { 
+      font-size: 24px; 
+    }
+    .section1_con .business_con p {
+      padding-top: 20px;
+    }
+    .section1_con .businessimg {
+      width:80%;
+      background-position: bottom;
+      background-size: 200px;
+      margin-top: 40px;
+    }
+    .section1_con .businessimg img { margin-left: 20%; }
+}
+
+/*bx-pager*/
+.bx-pager{
+display:block;
+position:absolute;
+top:140px;
+right:2%;
+}
+.bx-pager-item{
+display:block;
+float: left;
+font-size: 16px;
+padding:20px 10px;
+}
+
+.ocean { 
+  height: 5%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #eee;
+}
+
+.wave {
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 4s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -195px;
+  background: url(/theme/codberg/wave2.svg) repeat-x; 
+  animation: wave 8s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+.wave:nth-of-type(3) {
+ background: url(/theme/codberg/wave.svg) repeat-x; 
+  top: -195px;
+  animation: wave 5s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+.wave:nth-of-type(4) {
+background: url(/theme/codberg/wave1.svg) repeat-x; 
+  top: -175px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,0,0);
+  }
+  50% {
+    transform: translate3d(0,0,0);
+  }
+}
