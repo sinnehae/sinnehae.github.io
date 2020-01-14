@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>진해군항제</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="keywords" content="진해군항제 벚꽃축제 진해 창원 봄축제 벚꽃">
+    <meta name="description" content="진해 군항제는 한국 최대 규모의 벚꽃축제 입니다.">
+    <meta property="og:title" content="2019년 진해 군항제">
+    <meta property="og:image" href="flower3.png">
+    <meta property="og:description" content="2019년 진해 군항제">
+    <link rel="shortcut icon" type="image/png" href="favi16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="flower2.png">
+    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="favi180.png">
+    <link href="https://fonts.googleapis.com/css?family=Song+Myung&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            font-family: "malgun", sans-serif;
+            min-width: 1920px;
+            overflow-x: auto;
+        }
+        ::-webkit-scrollbar { display:none; }
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        button,
+        input,
+        label {
+            outline: 0;
+            border: 0;
+        }
+
+        table {
+            display: table;
+        }
+
+        tr {
+            display: table-row;
+        }
+
+        th {
+            display: table-cell;
+        }
+
+        td {
+            display: table-cell;
+        }
+
+        thead {
+            display: table-header-group;
+        }
+
+        tfoot {
+            display: table-footer-group;
+        }
+
+
+
+
+        .hd {
+            width: 100%;
+            height: 150px;
+            background-image: url("hd_bg.png");
+            z-index: 10;
+            position: relative;
+        }
+
+        .hd_wrap {
+            clear: both;
+            width: 1100px;
+            height: 50px;
+            margin: 0 auto;
+        }
+
+        .slogo {
+            display: block;
+            float: left;
+            width: 105px;
+            height: 27px;
+            background-image: url("citylogo.png");
+            background-repeat: no-repeat;
+            margin-top: 12px;
+        }
+
+        .info_box {
+            float: left;
+            margin-left: 240px;
+            line-height: 50px;
+        }
+
+        .info_box a {
+            display: block;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .top {
+            float: right;
+        }
+
+        .top li {
+            float: left;
+        }
+
+        .top li a {
+            display: block;
+            line-height: 50px;
+            padding: 0px 0px 0px 20px;
+            color: white;
+            font-size: 14px;
+        }
+
+        .logo {
+            display: block;
+            float: left;
+            margin-top: 25px;
+        }
+
+        .sub {
+            display: none;
+            position: absolute;
+            z-index: 20;
+            padding-top: 50px;
+            z-index:1000;
+        }
+
+        #mainmenu:before {
+            content: "";
+            display: block;
+            height: 200px;
+            width: 100vw;
+            position: absolute;
+            top: 150px;
+            left: 0px;
+            background: #fff;
+            display: none;
+            border-top: 3px solid #ccc;
+            border-bottom: 3px solid #ccc;
+            z-index: 19;
+        }
+
+        #mainmenu:hover .sub {
+            display: block;
+        }
+
+        #mainmenu:hover::before {
+            display: block;
+        }
+
+        #mainmenu {
+            float: left;
+            margin-left: 100px; margin-top: 25px;
+        }
+
+        #mainmenu li {
+            float: left;
+            width: 100px;
+            padding: 0px 16px;
+        }
+
+        #mainmenu li a {
+            display: block;
+            text-align: center;
+            line-height: 40px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #mainmenu li:hover .dp1 {
+            color: #da508b;
+            border-bottom: 2px solid #da508b;
+        }
+
+        #mainmenu li .sub li {
+            clear: both;
+        }
+
+        #mainmenu li .sub a {
+            text-align: left;
+            font-size: 15px;
+            color: #666;
+            font-weight: 400;
+        }
+
+        #mainmenu li .sub a:hover {
+            color: #da508b;
+            font-weight: bold;
+        }
+
+        #frm1 {
+            float: right;
+            padding-top: 25px;
+        }
+        .search {
+            display: block;
+            float: left;
+            width: 32px;
+            height: 32px;
+            border-radius: 20px;
+            overflow: hidden;
+            text-indent: -9999px;
+            background-image: url("searchwhite2.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            cursor: pointer;
+            background-color: #666;
+            margin-top: 5px;
+        }
+
+        #sell {
+            display: block;
+            float: left;
+            width: 140px;
+            margin-left: 20px;
+            margin-top: 6px;
+            height: 32px;
+            border-radius: 8px;
+        }
+
+        #go_btn {
+            display: block;
+            float: left;
+            width: 32px;
+            height: 32px;
+            text-align: center;
+            margin-top: 6px;
+            background: #666;
+            border-radius: 20px;
+            margin-left: 10px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #search_form {
+            position: absolute;
+            left: 0;
+            top: 150px;
+            width: 100vw;
+            height: 0px;
+            background: rgba(255, 255, 255, 0.8);
+            transition: 0.5s;
+            overflow: hidden;
+            z-index: 18;
+        }
+
+        .form_fr {
+            width: 680px; height: 200px;
+            margin: 10px auto;
+            position: relative;
+            
+        }
+
+        #ck1:checked+#search_form {
+            height: 200px;
+            border-bottom: 3px solid #ddd;
+            border-top: 3px solid #ddd;
+        }
+
+        .close_btn {
+            display: block;
+            width: 32px;
+            height: 32px;
+            cursor: pointer;
+            background-image: url("closegray_s.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            opacity: 0.6;
+            text-indent: -9999px;
+            float: right;
+        }
+
+        #keyword {
+            display: block;
+            width: 400px;
+            height: 60px;
+            outline: 0;
+            border: 0;
+            border-radius: 10px 0px 0px 10px; 
+            background: rgba(0, 0, 0, 0.5);
+            margin-top: 60px;
+            float: left;
+            font-size: 16px; 
+            color: #fff;
+            text-indent: 14px;
+            margin-left: 100px;
+        }
+
+        .search_btn {
+            display: block;
+            width: 60px;
+            height: 60px;
+            float: left;
+            margin-top: 60px;
+            margin-left: 2px;
+            font-size: 30px;
+            border-radius: 0px 10px 10px 0px; 
+            color: #fff;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .ck_item {
+            display: none;
+        }
+
+        #content {
+            clear: both;
+        }
+
+        #vs {
+            width: 100%;
+            min-height: 500px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .img_box {
+            width: 500%;
+            transition: 1s;
+            position: relative;
+        }
+
+        .img_box li {
+            width: 20%;
+            float: left;
+        }
+
+        .img_box li img {
+            display: block;
+            width: 100%;
+        }
+
+        .btn_box { 
+            position: absolute;
+            bottom: 125px;
+            left: 50%;
+            margin-left: -75px;
+            width: 150px;
+        }
+
+        .btn_box li {
+            float: left;
+            width: 30px;
+        }
+
+        .btn_box li label {
+            display: block;
+            width: 14px;
+            height: 14px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 10px;
+            cursor: pointer;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .ra_item {
+            display: none;
+        }
+
+        #ra1:checked~.img_box {
+            margin-left: 0;
+        }
+
+        #ra2:checked~.img_box {
+            margin-left: -100%;
+        }
+
+        #ra3:checked~.img_box {
+            margin-left: -200%;
+        }
+
+        #ra4:checked~.img_box {
+            margin-left: -300%;
+        }
+
+        #ra5:checked~.img_box {
+            margin-left: -400%;
+        }
+
+        .vs_box {
+            position: absolute;
+            top: 120px;
+            right: 52%;
+            width: 500px;
+        }
+
+        .vs_tit {
+            width: 500px;
+            height: 100px;
+            font-size: 75px;
+            font-family: 'Song Myung', serif;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0px 0px 8px #333;
+        }
+
+        .vs_con {
+            width: 500px;
+            height: 40px;
+            float: left;
+            font-size: 21px;
+            color: #fff;
+            font-weight: bold;
+            text-shadow: 1px 1px 4px #222;
+        }
+
+        .icon_box {
+            position: absolute;
+            top: 30px;
+            right: 300px;
+        }
+        .icon_box .ico_fr {
+            display: block;
+            width: 112px;
+            height: 112px;
+            border-radius: 60px;
+            box-sizing: border-box;
+            transition: 0.4s;
+            background-color: rgb(218, 80, 139, 0.8);
+            margin: 20px;
+            color: #fff;
+            text-align: center;
+            padding-top: 10px;
+            font-weight: bold;
+            font-size: 48px;
+        }
+
+        .icon_box a {
+            display: block;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .icon_box .ico_fr:hover a {
+            color: #da508b;
+            transition: 0.4s;
+        }
+
+        .icon_box .ico_fr:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #da508b;
+        }
+
+        .con_wrap {
+            width: 1200px;
+            height: 480px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .col_box {
+            width: 360px;
+            height: 420px;
+            float: left;
+            margin: 20px;
+            border-radius: 20px 20px 0px 0px;
+            margin-top: -100px;
+        }
+
+        .col_for {
+            width: 360px;
+            height: 100px;
+            background: rgba(242, 168, 200, 0.9);
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        .col_for2 {
+            width: 360px;
+            height: 100px;
+            background: rgba(218, 80, 139, 0.9);
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        .col_tit {
+            color: #fff;
+            font-size: 32px;
+            font-weight: 500;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .lst li {
+            width: 360px;
+            height: 105px;
+            margin-top: 2px;
+            background: #fbeff3;
+        }
+
+        .lst li:hover {
+            background: #f2a8c8;
+        }
+
+        .lst li:hover img {
+            background: #fff;
+            border-radius: 14px;
+        }
+
+        .lst li:hover h4 {
+            color: #fff;
+        }
+
+        .lst li:hover p {
+            color: #fff;
+        }
+
+        .lst li a {
+            width: 320px;
+            margin: 20px;
+            position: relative;
+            display: block;
+            float: left;
+            color: #333;
+        }
+
+        .lst li img {
+            position: absolute;
+            float: left;
+        }
+
+        .lst li h4,
+        p {
+            width: 200px;
+            height: 30px;
+            float: right;
+        }
+
+        .lst li h4 {
+            margin-top: 6px;
+            font-size: 18px;
+        }
+
+        .fas {
+            clear: both;
+            display: block;
+            color: #fff;
+            font-size: 42px;
+        }
+
+        .event {
+            width: 360px;
+            height: 320px;
+            background: #fbeff3;
+            margin-top: 2px;
+        }
+
+        .event #flower {
+            width: 40px;
+            height: 40px;
+            float: left;
+            margin: 10px 10px 10px 20px;
+        }
+
+        .event #event_tit {
+            line-height: 60px;
+            color: #da508b;
+            font-size: 18px;
+            float: left;
+        }
+
+        .event #event_img {
+            display: block;
+            float: left;
+            width: 320px;
+            height: 180px;
+            margin-left: 20px;
+        }
+
+        .event #event_con {
+            clear: both;
+            display: block;
+            width: 320px;
+            height: 200px;
+            float: left;
+            font-size: 14px;
+            margin-left: 20px;
+            margin-top: 6px;
+            line-height: 28px;
+            color: #333;
+        }
+
+        .notice {
+            width: 360px;
+            font-size: 13px;
+            background: #fffbfc;
+            margin-bottom: 2px;
+        }
+
+        .notice .item1 {
+            width: 260px;
+            text-indent: 10px;
+        }
+
+        .notice .item2 {
+            width: 100px;
+            text-align: center;
+        }
+
+        .notice tr th {
+            line-height: 28px;
+            text-align: center;
+            background: #f4e0e7;
+            color: #333;
+        }
+
+        .notice tr td {
+            line-height: 26px;
+            color: #333;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .notice tr td a {
+            display: block;
+            color: #333;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-right: 14px;
+            cursor: pointer;
+            width: 210px;
+        }
+
+        .notice tr td a:hover {
+            text-decoration: underline;
+            color: #da508b;
+        }
+
+        .link_wrap {
+            float: left;
+            width: 360px;
+            height: 200px;
+        }
+
+        .link_wrap img {
+            display: block;
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-top: 2px;
+        }
+
+        .sns_list {
+            width: 154px;
+            height: 198px;
+            float: right;
+            margin-left: 2px;
+            margin-top: 2px;
+            border: 1px solid #ccc;
+        }
+
+        .sns_list li a {
+            display: block;
+            color: #333;
+            font-size: 14px;
+            float: right;
+        }
+
+        .sns_list li {
+            width: 120px;
+            height: 60px;
+            display: block;
+            font-size: 38px;
+            line-height: 60px;
+            color: #f2a8c8;
+            border-bottom: 1px solid #ccc;
+            margin: 0 auto;
+        }
+
+        .sns_list li:hover {
+            color: #da508b;
+        }
+
+        .ft {
+            overflow: hidden;
+            width: 100%;
+            height: 120px;
+            background: #666;
+            margin-top: 80px;
+        }
+
+        .ft_wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .ft_wrap img {
+            display: block;
+            float: left;
+            width: 158px;
+            height: 40px;
+            margin-top: 40px;
+        }
+
+        .copyright {
+            width: 800px;
+            float: left;
+            height: 80px;
+            line-height: 24px;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+            padding-top: 24px;
+            margin: 0 auto;
+        }
+
+        .familyBox {
+            float: right;
+            margin-top: 40px;
+            margin-right: 20px;
+        }
+
+        #family {
+            display: block;
+            line-height: 40px;
+            width: 200px;
+            height: 40px;
+            font-size: 14px;
+            border: 1px solid #333;
+        }
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148904671-1"></script>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-148904671-1');
+    </script>
+</head>
+
+<body>
+    <header class="hd">
+        <div class="hd_wrap">
+            <a href="https://www.changwon.go.kr" class="slogo"></a>
+            <div class="info_box">
+                <a href=""><i class="fas fa-volume-down"></i> 진해군항제 축제부스 지원자 모집</a>
+            </div>
+            <ul class="top">
+                <li><a href="">창원소식</a></li>
+                <li><a href="">공지사항</a></li>
+                <li><a href="">FAQ</a></li>
+            </ul>
+        </div>
+        <div class="hd_wrap">
+            <a href="" class="logo"><img src="mainlogo.png" alt="logo"></a>
+            <nav id="mainmenu">
+                <ul>
+                    <li>
+                        <a href="" class="dp1">군항제소개</a>
+                        <ul class="sub">
+                            <li><a href="">군항제란?</a></li>
+                            <li><a href="">개화현황</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">행사안내</a>
+                        <ul class="sub">
+                            <li><a href="">프로그램</a></li>
+                            <li><a href="">퍼포먼스</a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">축제가이드</a>
+                        <ul class="sub">
+                            <li><a href="">시설안내</a></li>
+                            <li><a href="">교통안내</a></li>
+                            <li><a href="">벚꽃명소</a></li>
+                            <li><a href="">주변관광</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="" class="dp1">커뮤니티</a>
+                        <ul class="sub">
+                            <li><a href="">공지사항</a></li>
+                            <li><a href="">FAQ</a></li>
+                            <li><a href="">리플릿</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <form action="" id="frm1">
+                <label for="ck1" class="search">검색</label>
+                <select name="" id="sell">
+                    <option value="">English</option>
+                    <option value="">中文</option>
+                    <option value="">日本語</option>
+                </select>
+                <button id="go_btn">GO</button>
+                <input type="checkbox" id="ck1" class="ck_item">
+                <div id="search_form">
+                    <div class="form_fr">
+                        <label for="ck1" class="close_btn">닫기</label>
+                        <input type="text" id="keyword">
+                        <button class="search_btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </header>
+    <main id="content">
+        <figure id="vs">
+            <input type="radio" id="ra1" name="rd" class="ra_item" checked>
+            <input type="radio" id="ra2" name="rd" class="ra_item">
+            <input type="radio" id="ra3" name="rd" class="ra_item">
+            <input type="radio" id="ra4" name="rd" class="ra_item">
+            <input type="radio" id="ra5" name="rd" class="ra_item">
+
+            <ul class="img_box">
+                <li class="item"><img src="./mainvs1.jpg" alt="메인1"></li>
+                <li class="item"><img src="./mainvs2.jpg" alt="메인2"></li>
+                <li class="item"><img src="./mainvs3.jpg" alt="메인3"></li>
+                <li class="item"><img src="./mainvs4.jpg" alt="메인4"></li>
+                <li class="item"><img src="./mainvs5.jpg" alt="메인5"></li>
+            </ul>
+            <ul class="btn_box">
+                <li class="btn"><label for="ra1"></label></li>
+                <li class="btn"><label for="ra2"></label></li>
+                <li class="btn"><label for="ra3"></label></li>
+                <li class="btn"><label for="ra4"></label></li>
+                <li class="btn"><label for="ra5"></label></li>
+            </ul>
+            <div class="vs_box">
+                <div class="tit_box">
+                    <h2 class="vs_tit">2019 진해군항제</h2>
+                    <p class="vs_con">군항도시에서 함께 즐기는 세계 최대의 벚꽃 축제</p>
+                </div>
+            </div>
+            <ul class="icon_box">
+                <li class="ico_fr">
+                    <i class="fas fa-file-download"></i>
+                    <a href="">다운로드</a>
+                </li>
+                <li class="ico_fr">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <a href="">축제지도</a>
+                </li>
+                <li class="ico_fr">
+                    <i class="fas fa-calendar-alt"></i>
+                    <a href="">개화현황</a>
+                </li>
+            </ul>
+        </figure>
+        <div class="con_wrap">
+            <div class="col_box">
+                <div class="col_for">
+                    <h3 class="col_tit">프로그램 소개</h3>
+                </div>
+                <ul class="lst">
+                    <li>
+                        <a href="">
+                            <img src="fes1.png" alt="별빛축제">
+                            <h4 class="cate_tit">여좌천 별빛축제</h4>
+                            <p class="cate_con">루미나리에·레이저쇼</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="fes2.png" alt="군악대">
+                            <h4 class="cate_tit">군악의장 페스티벌</h4>
+                            <p class="cate_con">거리 퍼레이드·프린지공연</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="fes3.png" alt="불빛거리">
+                            <h4 class="cate_tit">제황산 불빛거리</h4>
+                            <p class="cate_con">빛터널·감성 불빛거리</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col_box" id="event_box">
+                <div class="col_for2">
+                    <h3 class="col_tit">오늘의 행사</h3>
+                </div>
+                <div class="event">
+                    <img src="./flower3.png" alt="flower" id="flower">
+                    <h3 id="event_tit">여좌천 별빛축제</h3>
+                    <img src="./event_img1.jpg" alt="별빛축제" id="event_img">
+                    <p id="event_con">
+                        <i class="fas fa-clock"></i> 2019. 3. 29 (금) ~ 4. 10 (화) <br>
+                        <i class="fas fa-map-marker-alt"></i> 여좌천 양측도로 및 로망스 다리
+                    </p>
+                </div>
+            </div>
+            <div class="col_box">
+                <div class="col_for">
+                    <h3 class="col_tit">공지사항</h3>
+                </div>
+                <table class="notice">
+                    <thead>
+                        <tr>
+                            <th class="item1">제목</th>
+                            <th class="item2">등록일</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="item1">
+                                <a href="#pop" class="opener">진해군항제 외국어 통역 자원봉사자 모집 안내</a>
+                            </td>
+                            <td class="item2">2019-03-24</td>
+                        </tr>
+                        <tr>
+                            <td class="item1">
+                                <a href="#">진해군항제 문화행사 참여자 모집 공고</a>
+                            </td>
+                            <td class="item2">2019-03-20</td>
+                        </tr>
+                        <tr>
+                            <td class="item1">
+                                <a href="#">축제 기간 투어버스 운행 및 일정 안내</a>
+                            </td>
+                            <td class="item2">2019-03-17</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="link_wrap">
+                    <div class="map">
+                        <a href=""><img src="m_calendar.png" alt=""></a>
+                    </div>
+                    <div class="sns_list">
+                        <ul>
+                            <li><i class="fab fa-instagram"></i><a href=""><span>인스타그램</span></a></li>
+                            <li><i class="fab fa-facebook"></i><a href=""><span>페이스북</span></a></li>
+                            <li><i class="fab fa-twitter-square"></i><a href=""><span>트위터</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="ft">
+        <div class="ft_wrap">
+            <img src="./citylogo.png" alt="logo">
+            <p class="copyright">
+                (우 51435) 경상남도 창원시 의창구 중앙대로 151 (용호동)
+                <br>문의전화 : 055-225-2114 <br>
+                COPYRIGHT 2017. CHANGWON CITY. ALL RIGHTS RESERVED.
+            </p>
+            <div class="familyBox">
+                <select name="family" id="family">
+                    <option value="">관련 사이트</option>
+                    <option value="https://www.changwon.go.kr/">창원시</option>
+                    <option value="http://culture.changwon.go.kr/">창원관광</option>
+                    <option value="http://kto.visitkorea.or.kr">한국관광공사</option>
+                    <option value="http://utis.changwon.go.kr/main">창원교통정보</option>
+                    <option value="http://bus.changwon.go.kr/">창원버스정보</option>
+                </select>
+            </div>
+        </div>
+    </footer>
+</body></html>
