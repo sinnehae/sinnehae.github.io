@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>진해군항제</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="keywords" content="진해군항제 벚꽃축제 진해 창원 봄축제 벚꽃">
+    <meta name="keywords" content="진해군항제, 벚꽃축제, 진해, 창원, 벚꽃">
     <meta name="description" content="진해 군항제는 한국 최대 규모의 벚꽃축제 입니다.">
     <meta property="og:title" content="2019년 진해 군항제">
     <meta property="og:image" href="flower3.png">
@@ -14,6 +14,24 @@
     <link rel="icon" type="image/png" sizes="32x32" href="flower2.png">
     <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="favi180.png">
     <link href="https://fonts.googleapis.com/css?family=Song+Myung&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.img_box').bxSlider({
+                auto: true,
+                speed: 800,
+                pause: 3000,
+                mode: 'fade',
+                pager: false,
+                captions: true,
+                adaptiveHeight: true,
+            });
+        });
+    </script>
 
     <style>
         * {
@@ -29,7 +47,11 @@
             min-width: 1920px;
             overflow-x: auto;
         }
-        ::-webkit-scrollbar { display:none; }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
         ul {
             list-style: none;
         }
@@ -136,7 +158,7 @@
             position: absolute;
             z-index: 20;
             padding-top: 50px;
-            z-index:1000;
+            z-index: 1000;
         }
 
         #mainmenu:before {
@@ -164,7 +186,8 @@
 
         #mainmenu {
             float: left;
-            margin-left: 100px; margin-top: 25px;
+            margin-left: 100px;
+            margin-top: 25px;
         }
 
         #mainmenu li {
@@ -207,6 +230,7 @@
             float: right;
             padding-top: 25px;
         }
+
         .search {
             display: block;
             float: left;
@@ -260,10 +284,11 @@
         }
 
         .form_fr {
-            width: 680px; height: 200px;
+            width: 680px;
+            height: 200px;
             margin: 10px auto;
             position: relative;
-            
+
         }
 
         #ck1:checked+#search_form {
@@ -291,11 +316,11 @@
             height: 60px;
             outline: 0;
             border: 0;
-            border-radius: 10px 0px 0px 10px; 
+            border-radius: 10px 0px 0px 10px;
             background: rgba(0, 0, 0, 0.5);
             margin-top: 60px;
             float: left;
-            font-size: 16px; 
+            font-size: 16px;
             color: #fff;
             text-indent: 14px;
             margin-left: 100px;
@@ -309,7 +334,7 @@
             margin-top: 60px;
             margin-left: 2px;
             font-size: 30px;
-            border-radius: 0px 10px 10px 0px; 
+            border-radius: 0px 10px 10px 0px;
             color: #fff;
             background: rgba(0, 0, 0, 0.5);
         }
@@ -345,7 +370,7 @@
             width: 100%;
         }
 
-        .btn_box { 
+        .btn_box {
             position: absolute;
             bottom: 125px;
             left: 50%;
@@ -424,6 +449,7 @@
             top: 30px;
             right: 300px;
         }
+
         .icon_box .ico_fr {
             display: block;
             width: 112px;
@@ -469,7 +495,7 @@
             float: left;
             margin: 20px;
             border-radius: 20px 20px 0px 0px;
-            margin-top: -100px;
+            margin-top: -165px;
         }
 
         .col_for {
@@ -819,25 +845,12 @@
     </header>
     <main id="content">
         <figure id="vs">
-            <input type="radio" id="ra1" name="rd" class="ra_item" checked>
-            <input type="radio" id="ra2" name="rd" class="ra_item">
-            <input type="radio" id="ra3" name="rd" class="ra_item">
-            <input type="radio" id="ra4" name="rd" class="ra_item">
-            <input type="radio" id="ra5" name="rd" class="ra_item">
-
             <ul class="img_box">
                 <li class="item"><img src="./mainvs1.jpg" alt="메인1"></li>
                 <li class="item"><img src="./mainvs2.jpg" alt="메인2"></li>
                 <li class="item"><img src="./mainvs3.jpg" alt="메인3"></li>
                 <li class="item"><img src="./mainvs4.jpg" alt="메인4"></li>
                 <li class="item"><img src="./mainvs5.jpg" alt="메인5"></li>
-            </ul>
-            <ul class="btn_box">
-                <li class="btn"><label for="ra1"></label></li>
-                <li class="btn"><label for="ra2"></label></li>
-                <li class="btn"><label for="ra3"></label></li>
-                <li class="btn"><label for="ra4"></label></li>
-                <li class="btn"><label for="ra5"></label></li>
             </ul>
             <div class="vs_box">
                 <div class="tit_box">
